@@ -6,6 +6,83 @@ div.topH {
   top:0;
   border: 3px solid blue;
 }
+
+.flex {
+	/*width: 350px;
+	height: 200px;*/
+	width: 90%;
+	height: 90%;
+	border: 1px solid #555;
+	font: 14px Arial;
+
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	
+	display: flex;
+	flex-direction: row;
+}
+
+.flex > div
+{
+	-webkit-flex: 1 1 auto;
+	flex: 1 1 auto;
+	width: 30px;
+	-webkit-transition: width 0.7s ease-out;
+	transition: width 0.7s ease-out;
+	color:black;
+}
+
+   .flex > div:nth-child(1){ background : #009246; }
+   .flex > div:nth-child(2){ background : #F1F2F1; }
+   .flex > div:nth-child(3){ background : #CE2B37; }
+
+   .flex > div:hover
+   {
+	   width: 200px;
+   }
+
+section.myDefault
+{
+	width: 90%;
+	height: 90%;
+}
+
+#main
+{
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+}
+
+#main > mtitle 
+{
+	-webkit-flex: 1 1 20%;
+		flex: 1 1 20%;
+	-webkit-order: 1;
+		order: 1;
+	margin: 4px;
+	padding: 5px;
+	border: 1px solid #cccc33;
+	border-radius: 7pt;
+	line-height:120px;
+}
+
+#main > mbody
+{
+	-webkit-flex: 1 1 80%;
+		flex: 1 1 80%;
+	-webkit-order: 2;
+		order: 2;
+	margin: 4px;
+	padding: 5px;
+	border: 1px solid #8888bb;
+	border-radius: 7pt;
+	line-height:475px;
+}
+
 </style>
 
 <html>
@@ -34,30 +111,46 @@ div.topH {
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-transition="zoom" style="width:90%;height:90%">
+				<section class="myDefault">
+					<div id='main'>
+						<mtitle>hihi</mtitle>
+						<mbody><p style="vertical-align:middle;">Test body aoishdfoasihdfoaishdf asoidhfaosihfaos saoihfaosidhf saoidhfaosihf
+						osidhfosihdfo asodiihfosaidhf oisdhfosaihf osidhfosihdf osidhfo sih</p></mbody>
+					</div>
+				</section>
+				<section data-transition="zoom" class="myDefault">
 					<!--div class="topH"><p style="text-align:center;">asasodif</p></div-->
 					<h4>Introduction to NAO robot</h4>
 					<!--a href="https://vblc.eduhk.hk">VBLC</a-->
 					<img data-src="images/naoSalute.png" style="position:fixed;width:20%;left:0%;bottom:0%;border-style:none;background-color:transparent;box-shadow:none;">
 					<!--iframe data-src="http://hakim.se"></iframe-->
 				</section>
-				<section>
+				<section class="myDefault">
 					<section>
-						<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+						<video style="display:block;margin: 0 auto;" data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
 					</section>
 					<section>Slide 2</section>
 					<section>
 						<h4>This video will use up the remaining space on the slide</h4>
+						<center>
     						<video data-autoplay class="stretch" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+						</center>
 					</section>
 				</section>
-				<section style="top: 10.5px; display: block;">
+				<section class="myDefault" style="top: 10.5px; display: block;">
 					<h2>Clever Quotes</h2>
-					<blockquote style="font-size:100%;" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+					<blockquote style="font:14px Arial;" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
 						The telephone wire, as we know it, has become too slow and too small to handle Internet traffic. It took 75 years for telephones to be used by 50 million customers, but it took only four years for the Internet to reach that many users. The telephone wire, as we know it, has become too slow and too small to handle Internet traffic. It took 75 years for telephones to be used by 50 million customers, but it took only four years for the Internet to reach that many users.
 					</blockquote>
 				</section>
-				<section>
+				<section class="myDefault">
+					<p>Flexbox nuovo</p>
+					<div class="flex">
+					  <div>uno</div>
+					  <div>due</div>
+					  <div>tre</div>
+					  <div style="color:white;">quo</div>
+					</div>
 				</section>
 			</div>
 		</div>
