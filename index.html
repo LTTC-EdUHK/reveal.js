@@ -80,7 +80,11 @@ section.myDefault
 	padding: 5px;
 	border: 1px solid #8888bb;
 	border-radius: 7pt;
-	line-height:475px;
+	/*line-height:475px;*/
+	display:flex;
+	flex-flow: column;
+	justify-content:center;
+	align-items:center;
 }
 
 </style>
@@ -114,8 +118,12 @@ section.myDefault
 				<section class="myDefault">
 					<div id='main'>
 						<mtitle>hihi</mtitle>
-						<mbody><p style="vertical-align:middle;">Test body aoishdfoasihdfoaishdf asoidhfaosihfaos saoihfaosidhf saoidhfaosihf
-						osidhfosihdfo asodiihfosaidhf oisdhfosaihf osidhfosihdf osidhfo sih</p></mbody>
+						<mbody>
+						<div>
+						Test body aoishdfoasihdfoaishdf asoidhfaosihfaos saoihfaosidhf saoidhfaosihf
+						osidhfosihdfo asodiihfosaidhf oisdhfosaihf osidhfosihdf osidhfo sih
+						</div>
+						</mbody>
 					</div>
 				</section>
 				<section data-transition="zoom" class="myDefault">
