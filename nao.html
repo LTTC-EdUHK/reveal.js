@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>IntroToNAO</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -23,47 +23,23 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--for embedding-->
+		<script src="js/csi.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section class="default">
-					<div style="padding-top:215px">Introduction to programming on Robot NAO</div>
+					<div style="padding-top:215px;font-weight:bold;text-shadow: 2px 2px 8px #000;">Introduction to programming on Robot NAO</div>
 					<img class="plain"  data-src="images/naoSalute.png" style="position:fixed;width:20%;right:0%;bottom:4%;">
 				</section>
-				<section>
-					<section class="default">
-						<div id='main'>
-							<mtitle>Types of humanoid Robots</mtitle>
-							<mbody>
-								<span class="fragment fade-in">
-									<div class="fragment fade-out" style="position:absolute;top:35%;left:10%;">
-										<h3 style="color:red;">Unrealistic!</h3>
-									</div>
-								</span>
-								<div class="flex-container" style="height:95%;width:95%">
-									<img class="plain fragment fade-out" data-src="https://bit.ly/2psC92h" alt="Doraemon">
-									<img class="plain fragment fade-out" data-src="images/terminator.png" style="width:15%;padding-left:50px;">
-									<a href="https://youtu.be/33F2G5mYiHY?t=8" style="width:20%;">
-									  <img class="plain" data-src="https://bit.ly/2oIuIUn" style="width:100%;padding:0px;">
-									</a>
-									<img class="plain" data-src="images/jpezrobot.png" style="width:20%;padding-left:50px;">
-									<a href="https://www.youtube.com/watch?v=p-8GEcLRRAM">
-									  <img class="plain" data-src="images/actroid.png" style="width:100%;padding:0px;">
-									</a>
-									<a href="https://youtu.be/_sBBaNYex3E" style="width:20%;">
-									  <img class="plain" data-src="https://bit.ly/2nf3gNE" style="width:100%;padding:0px;">
-									</a>
-								</div>
-							</mbody>
-						</div>
-					</section>
-				</section>
+				<div data-include="contents/introRobot.html"></div>
 				<section class="default">
 					<div id='main'>
-						<mtitle>Robot Tasks</mtitle>
-						<mbody style="align-items:flex-start;">
-							<li style="font-size:14px;">Specific robot is designed for some tasks, no universal robot</li>
+						<mtitle>NAO applications/appearances</mtitle>
+						<mbody style="justify-content:flex-start;align-items:flex-start;">
+							<li style="font-size:14px;">Some NAO robots were seen deployed on:</li>
 						</mbody>
 					</div>
 				</section>
@@ -82,12 +58,6 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
-			});
-
-			Reveal.configure({
-				keyboard: {
-					13: 'next'
-				}
 			});
 		</script>
 	</body>

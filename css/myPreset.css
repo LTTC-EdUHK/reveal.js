@@ -29,6 +29,8 @@ section.default
         flex-flow: column;
         justify-content:center;
         align-items:center;
+		font-weight:bold;
+		text-shadow: 2px 2px 8px #000;
 }
 
 #main > mbody
