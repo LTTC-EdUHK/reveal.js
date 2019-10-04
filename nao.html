@@ -1,92 +1,5 @@
 <!doctype html>
 
-<style>
-.flex {
-	/*width: 350px;
-	height: 200px;*/
-	width: 90%;
-	height: 90%;
-	border: 1px solid #555;
-	font: 14px Arial;
-
-	display: -webkit-flex;
-	-webkit-flex-direction: row;
-	
-	display: flex;
-	flex-direction: row;
-}
-
-.flex > div
-{
-	-webkit-flex: 1 1 auto;
-	flex: 1 1 auto;
-	width: 30px;
-	-webkit-transition: width 0.7s ease-out;
-	transition: width 0.7s ease-out;
-	color:black;
-}
-
-   .flex > div:nth-child(1){ background : #009246; }
-   .flex > div:nth-child(2){ background : #F1F2F1; }
-   .flex > div:nth-child(3){ background : #CE2B37; }
-
-   .flex > div:hover
-   {
-	   width: 200px;
-   }
-
-section.myDefault
-{
-	width: 90%;
-	height: 90%;
-}
-
-#main
-{
-	width: 100%;
-	height: 100%;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: column;
-	flex-flow: column;
-}
-
-#main > mtitle 
-{
-	-webkit-flex: 1 1 20%;
-		flex: 1 1 20%;
-	-webkit-order: 1;
-		order: 1;
-	margin: 4px;
-	padding: 5px;
-	border: 1px solid #cccc33;
-	border-radius: 7pt;
-	/*line-height:120px;*/
-	display:flex;
-	flex-flow: column;
-	justify-content:center;
-	align-items:center;
-}
-
-#main > mbody
-{
-	-webkit-flex: 1 1 80%;
-		flex: 1 1 80%;
-	-webkit-order: 2;
-		order: 2;
-	margin: 4px;
-	padding: 5px;
-	border: 1px solid #8888bb;
-	border-radius: 7pt;
-	/*line-height:475px;*/
-	display:flex;
-	flex-flow: column;
-	justify-content:center;
-	align-items:center;
-}
-
-</style>
-
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -96,7 +9,8 @@ section.myDefault
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+		<link rel="stylesheet" href="css/myPreset.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -113,15 +27,48 @@ section.myDefault
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section class="myDefault">
-					<div id='main'>
-						<mtitle>Introduction to NAO</mtitle>
-						<mbody>
-						<div>
-							History	
+				<section class="default">
+					<div style="padding-top:215px">Introduction to programming on Robot NAO</div>
+					<img class="plain"  data-src="images/naoSalute.png" style="position:fixed;width:20%;right:0%;bottom:4%;">
+				</section>
+				<section>
+					<section class="default">
+						<div id='main'>
+							<mtitle>Types of humanoid Robots</mtitle>
+							<mbody>
+								<span class="fragment fade-in">
+									<div class="fragment fade-out" style="position:absolute;top:35%;left:10%;">
+										<h3 style="color:red;">Unrealistic!</h3>
+									</div>
+								</span>
+								<div class="flex-container" style="height:95%;width:95%">
+									<img class="plain fragment fade-out" data-src="https://bit.ly/2psC92h" alt="Doraemon">
+									<img class="plain fragment fade-out" data-src="images/terminator.png" style="width:15%;padding-left:50px;">
+									<a href="https://youtu.be/33F2G5mYiHY?t=8" style="width:20%;">
+									  <img class="plain" data-src="https://bit.ly/2oIuIUn" style="width:100%;padding:0px;">
+									</a>
+									<img class="plain" data-src="images/jpezrobot.png" style="width:20%;padding-left:50px;">
+									<a href="https://www.youtube.com/watch?v=p-8GEcLRRAM">
+									  <img class="plain" data-src="images/actroid.png" style="width:100%;padding:0px;">
+									</a>
+									<a href="https://youtu.be/_sBBaNYex3E" style="width:20%;">
+									  <img class="plain" data-src="https://bit.ly/2nf3gNE" style="width:100%;padding:0px;">
+									</a>
+								</div>
+							</mbody>
 						</div>
+					</section>
+				</section>
+				<section class="default">
+					<div id='main'>
+						<mtitle>Robot Tasks</mtitle>
+						<mbody style="align-items:flex-start;">
+							<li style="font-size:14px;">Specific robot is designed for some tasks, no universal robot</li>
 						</mbody>
 					</div>
+				</section>
+				<section class="default">
+				</section>
 			</div>
 		</div>
 
