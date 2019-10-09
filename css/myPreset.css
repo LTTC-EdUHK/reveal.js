@@ -36,8 +36,8 @@ section.default
         flex-flow: column;
         justify-content:center;
         align-items:center;
-		font-weight:bold;
-		text-shadow: 2px 2px 8px #000;
+	font-weight:bold;
+	text-shadow: 2px 2px 8px #000;
 }
 
 #mainrow > leftPad
@@ -47,14 +47,18 @@ section.default
         -webkit-order: 1;
                 order: 1;
         margin: 4px;
+        margin-right: 0px;
         padding: 5px;
         display:flex;
         flex-flow: column;
         justify-content:center;
         align-items:flex-start;
-		font-weight:bold;
-		text-shadow: 2px 2px 8px #000;
-		background-image:url("https://newevolutiondesigns.com/images/freebies/colorful-background-35.jpg");
+	color:#bbb;
+	font-weight:bold;
+	text-shadow: 2px 2px 8px #555;
+	background-image:url("../images/colorful-background.jpg");
+	background-position: center center;
+	background-size: cover;
 }
 
 #main > mbody
@@ -73,6 +77,37 @@ section.default
         align-items:center;
 }
 
+#main > mbody > .scrollview
+{
+	flex: 1;
+	display: flex;
+	flex-flow:column;
+	width: 100%;
+	height: 100%;
+
+	overflow-y:scroll;
+}
+
+#customScrl::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#customScrl::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#customScrl::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
 #mainrow > rightPad
 {
         -webkit-flex: 1 1 65%;
@@ -80,9 +115,12 @@ section.default
         -webkit-order: 2;
                 order: 2;
         margin: 4px;
+        margin-left: 0px;
         padding: 5px;
         border: 1px solid #8888bb;
         border-radius: 7pt;
+        border-top-left-radius: 0pt;
+        border-bottom-left-radius: 0pt;
         display:flex;
         flex-flow: column;
         justify-content:center;
@@ -126,4 +164,23 @@ section.default
 	border-style:none;
 	background-color:transparent;
 	box-shadow:none;
+}
+
+.table_images
+{
+	height:250px;
+	background-size:contain;
+	background-position:right, left;
+	background-color: rgba(255,255,255,1), rgba(255,255,255,0.4);
+	background-blend-mode: normal;
+	background-repeat:no-repeat;
+
+}
+
+.bgImage_overlay
+{
+	height:150px;
+	background-size:75%;
+	background-position:bottom;
+	background-repeat:no-repeat;
 }
