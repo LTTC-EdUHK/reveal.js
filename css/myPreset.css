@@ -184,3 +184,20 @@ section.default
 	background-position:bottom;
 	background-repeat:no-repeat;
 }
+
+.centerH
+{
+		position: relative;
+		background: transparent;
+
+		left: 50%;
+		width:150px;
+		margin-left: -75px;
+}
+
+#customList
+{
+	font-size:18px;
+	padding: 20px 0px 0px 20px;
+	text-align:left;
+}
