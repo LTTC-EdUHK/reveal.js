@@ -24,8 +24,6 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<!--for embedding-->
-		<script src="js/csi.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -34,9 +32,9 @@
 					<div style="padding-top:215px;font-weight:bold;text-shadow: 2px 2px 8px #000;">Introduction to programming on Robot NAO</div>
 					<img class="plain" data-src="images/naoSalute.png" style="position:fixed;width:20%;right:0%;bottom:4%;">
 				</section>
-				<div data-include="contents/introRobot.html"></div>
-				<div data-include="contents/introNao.html"></div>
-				<div data-include="contents/introChoregraphe.html"></div>
+				<section data-external="contents/introRobot.html"></section>
+				<section data-external="contents/introNao.html"></section>
+				<section data-external="contents/introChoregraphe.html"></section>
 				<section>
 					<h1>Finish!</h1>
 				</section>
@@ -51,7 +49,15 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/external/external.js', 
+						condition: function() {
+							return !!document.querySelector( '[data-external],[data-external-replace]' );
+						},
+						external: {
+							async: false
+						}
+					}
 				]
 			});
 		</script>
