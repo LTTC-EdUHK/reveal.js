@@ -37,13 +37,21 @@
 	padding-left:15%;
 }
 
-#fg_img {
+#fg_img, #tmpl1_img {
 	position:fixed;
 	display:block;
     bottom: 5%;
     right: 10px;
     height: 200px;
     width: auto;
+}
+
+#tmpl1_img_center {
+	display:block;
+    height: 200px;
+    width: auto;
+	top:0;right:0;bottom:0;left:0;
+	margin:auto;	
 }
 
 .flexInBlk > tmpl1_title {
@@ -63,7 +71,8 @@
 	flex: 1 1 80%;
 	order: 2;
 	margin: 4px;
-	padding: 5px;
+	padding: 25px;
+	padding-left: 5px;
 	border: 1px solid #8888bb;
 	border-radius: 7pt;
 	display:flex;
