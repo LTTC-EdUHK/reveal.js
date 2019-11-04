@@ -1,16 +1,46 @@
-.default>.center {
-	margin: auto;
-	width:50%;
-}
-
-#title {
-}
-
-#body {
-}
-
 .frontpage {
+	display: block;
+	height:90%;	
+	width:90%;
 }
 
+.fg_flex {
+	position: absolute;
+	top:35%;right:0;bottom:45%;left:0;
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;/*vertical*/
+	justify-content: center; /*horizontal*/
+}
 
+#fg_title {
+	flex: 2 2;
+	order: 1;
+	font-weight:bold;
+	text-shadow: 2px 2px 8px #000;
+	padding: 15px;
+	padding-right:10%;
+	padding-left:10%;
+}
 
+#fg_subTitle {
+	flex: 1 1;
+	order: 2;
+	align-items: center;/*vertical*/
+	font-size:1.5rem;
+	padding: 15px;
+	padding-right:15%;
+	padding-left:15%;
+}
+
+#fg_img {
+	position:fixed;
+	display:block;
+    bottom: 5%;
+    right: 10px;
+    height: 200px;
+    width: auto;
+}
+
+/*TODO: ch48: stacking context by z-index*/
