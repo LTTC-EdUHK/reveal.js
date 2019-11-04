@@ -1,17 +1,20 @@
-.frontpage {
+.blkpage {
 	display: block;
 	height:90%;	
 	width:90%;
 }
 
-.fg_flex {
+.flexInBlk {
 	position: absolute;
-	top:35%;right:0;bottom:45%;left:0;
+	top:0;right:0;bottom:0;left:0;
 	margin:auto;
 	display: flex;
 	flex-direction: column;
-	align-items: center;/*vertical*/
-	justify-content: center; /*horizontal*/
+	align-items: center;/*horizontal*/
+	justify-content: center; /*vertical*/
+}
+.fg_flex {
+	top:35%;right:0;bottom:45%;left:0;
 }
 
 #fg_title {
@@ -27,7 +30,7 @@
 #fg_subTitle {
 	flex: 1 1;
 	order: 2;
-	align-items: center;/*vertical*/
+	align-items: center;/*horizontal*/
 	font-size:1.5rem;
 	padding: 15px;
 	padding-right:15%;
@@ -43,4 +46,43 @@
     width: auto;
 }
 
+.flexInBlk > tmpl1_title {
+    flex: 1 1 20%;
+    order: 1;
+    margin: 4px;
+    padding: 5px;
+	font-weight:bold;
+	text-shadow: 2px 2px 8px #000;
+
+	display:flex;
+	flex-flow: column;
+	justify-content:center;
+}
+
+.flexInBlk > tmpl1_body {
+	flex: 1 1 80%;
+	order: 2;
+	margin: 4px;
+	padding: 5px;
+	border: 1px solid #8888bb;
+	border-radius: 7pt;
+	display:flex;
+	flex-flow: column;
+	justify-content:flex-start;
+	align-items:flex-start;
+}
+
+tmpl1_body > li {
+	font-size:22px;
+	padding: 20px 0px 0px 20px;
+}
+
+tmpl1_body > ul {
+	padding-left:20px;
+}
+
+tmpl1_body > ul > li {
+	font-size:14px;
+	padding-top:5px;
+}
 /*TODO: ch48: stacking context by z-index*/
