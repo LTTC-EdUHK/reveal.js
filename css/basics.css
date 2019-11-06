@@ -1,18 +1,42 @@
+.centerS { 
+	top:0;right:0;bottom:0;left:0; 
+	margin:auto !important; /*more imporant to override, but should use better selector*/
+}
+
+.addFlexCenterV {
+    display:flex;
+    flex-flow: column;
+    justify-content:center;
+}
+
+.addTFCenterV {
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+
 .blkpage {
 	display: block;
 	height:90%;	
 	width:90%;
 }
-
+/*
+.blkpage > div {
+	position: relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+*/
 .flexInBlk {
 	position: absolute;
 	top:0;right:0;bottom:0;left:0;
 	margin:auto;
 	display: flex;
-	flex-direction: column;
+	flex-flow: column;
 	align-items: center;/*horizontal*/
 	justify-content: center; /*vertical*/
 }
+
 .fg_flex {
 	top:35%;right:0;bottom:45%;left:0;
 }
@@ -44,14 +68,6 @@
     right: 10px;
     height: 200px;
     width: auto;
-}
-
-#tmpl1_img_center {
-	display:block;
-    height: 200px;
-    width: auto;
-	top:0;right:0;bottom:0;left:0;
-	margin:auto;	
 }
 
 .flexInBlk > tmpl1_title {
@@ -93,5 +109,54 @@ tmpl1_body > ul {
 tmpl1_body > ul > li {
 	font-size:14px;
 	padding-top:5px;
+}
+
+#tmpl1_img_center {
+	display:block;
+    width:95%;
+    height:auto%;
+}
+
+.flexInBlk > tmpl2_leftPad
+{
+    flex: 1 1 35%;
+    order: 1;
+    margin: 4px;
+    margin-right: 0px;
+    padding: 5px;
+
+	color:#bbb;
+	font-weight:bold;
+	text-shadow: 2px 2px 8px #555;
+	background-image:url("../images/colorful-background.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.flexInBlk > tmpl2_rightPad
+{
+	flex: 1 1 65%;
+	order: 2;
+	margin: 4px;
+	margin-left: 0px;
+	padding: 5px;
+	border: 1px solid #8888bb;
+	border-radius: 7pt;
+	border-top-left-radius: 0pt;
+	border-bottom-left-radius: 0pt;
+}
+
+#frg_hightlight_box {
+	position:absolute;
+	color:red;
+	font-size: 12px;
+	border: 1px dotted #f00;
+}
+
+#frg_hightlight_box > p {
+	position: relative;
+	font-size:2rem;
+	top:50%;
+	transform:translateY(-50%);
 }
 /*TODO: ch48: stacking context by z-index*/
