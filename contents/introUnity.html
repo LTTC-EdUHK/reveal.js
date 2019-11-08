@@ -13,11 +13,15 @@
 <section class="blkpage">
 	<div class="flexInBlk" style="flex-flow:row;">
 		<tmpl2_leftPad class="blkpage"><div class="addTFCenterV">Scene View Operation</div></tmpl2_leftPad>
-		<tmpl2_rightPad class="blkpage"><div class="addTFCenterV">
-											<video id="movie" preload controls width="640">
-												<source src="basics.mp4" type="video/mp4"/>
-											</video>
-										</div></tmpl2_rightPad>
+		<tmpl2_rightPad class="blkpage">
+			<div class="addTFCenterV">
+				<video id="movie" autoplay loop preload controls width="640">
+					<source src="basics.mp4" type="video/mp4"/>
+				</video>
+				<a href="#rotate" id="test">hihi</a>
+				<script src="js/video.js"></script>
+			</div>
+		</tmpl2_rightPad>
 	</div>
 </section>
 <section class="default">
