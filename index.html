@@ -66,7 +66,18 @@
 					}
 				]
 			});
+
+			Reveal.addEventListener('ready',function(event){
+				console.log("hodie");
+				var myA = document.querySelector('a#test');
+				if(myA != 'null') {
+					console.log('hiadd');
+					myA.addEventListener("click", function(event){
+						event.preventDefault();
+						movie.play();movie.pause();movie.currentTime=7;movie.play();
+					},true);
+				};
+			});
 		</script>
-		<script src="js/video.js"></script>
 	</body>
 </html>
